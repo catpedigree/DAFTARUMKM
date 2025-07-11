@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kost Pak Paidi menyediakan kos mahasiswa di Malang, dekat Universitas Asia. Fasilitas lengkap: kasur, lemari, suasana tenang. Cocok untuk mahasiswa putra dan putri mencari kos nyaman di Malang.">
+    <meta name="keywords" content="kos mahasiswa asia malang, kos malang, kos dekat universitas asia, kos murah malang, kos putra malang, kos putri malang, kos tenang malang, kos lengkap malang, kos di lowokwaru malang">
+    <title>Kost Mahasiswa Asia Malang - Kost Pak Paidi</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Mengatur font Inter secara global */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #003366; /* Warna tema utama */
+            color: #ffffff; /* Warna teks putih */
+        }
+        /* Custom styles for the mobile menu */
+        .mobile-menu-hidden {
+            display: none;
+        }
+        @media (max-width: 767px) { /* Adjust breakpoint as needed for mobile */
+            .mobile-menu-visible {
+                display: block;
+            }
+        }
+    </style>
+
+    <!-- Favicon SVG -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' ry='20' fill='%23FFD700'/%3E%3Cpath d='M25 40 L50 20 L75 40 L75 80 L25 80 Z' fill='%23003366'/%3E%3Cpath d='M40 50 L40 70 L60 70 L60 50 Z' fill='%23FFD700'/%3E%3C/svg%3E" type="image/svg+xml">
+</head>
+<body class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
+
+    <!-- Header Section -->
+    <header class="w-full max-w-4xl bg-white bg-opacity-10 rounded-xl p-6 mb-8 shadow-lg">
+        <div class="flex flex-col sm:flex-row justify-between items-center">
+            <h1 class="text-3xl sm:text-4xl font-bold text-yellow-300 mb-4 sm:mb-0">Kost Pak Paidi</h1>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuButton" class="sm:hidden px-4 py-2 bg-yellow-500 text-white rounded-lg shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75">
+                Menu
+            </button>
+
+            <!-- Desktop Navigation (hidden on mobile, visible on larger screens) -->
+            <nav class="hidden sm:flex space-x-4">
+                <a href="#tentang" class="text-white hover:text-yellow-300 transition duration-300">Tentang Kami</a>
+                <a href="#fasilitas" class="text-white hover:text-yellow-300 transition duration-300">Fasilitas</a>
+                <a href="#kontak" class="text-white hover:text-yellow-300 transition duration-300">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="w-full max-w-4xl bg-white bg-opacity-10 rounded-xl p-6 shadow-lg flex-grow">
+        
+        <!-- Mobile Menu Content (initially hidden) -->
+        <div id="mobileMenuContent" class="mobile-menu-hidden sm:hidden bg-white bg-opacity-10 rounded-lg p-4 mb-6">
+            <nav class="flex flex-col space-y-2">
+                <a href="#tentang" class="text-white hover:text-yellow-300 transition duration-300 py-1">Tentang Kami</a>
+                <a href="#fasilitas" class="text-white hover:text-yellow-300 transition duration-300 py-1">Fasilitas</a>
+                <a href="#kontak" class="text-white hover:text-yellow-300 transition duration-300 py-1">Kontak</a>
+            </nav>
+        </div>
+
+        <!-- Hero Section -->
+        <section id="hero" class="text-center mb-12">
+            <h2 class="text-2xl sm:text-3xl font-semibold text-yellow-200 mb-4">Kost Nyaman untuk Mahasiswa di Malang</h2>
+            <p class="text-lg leading-relaxed mb-6">
+                Mencari kos strategis dan nyaman dekat <span class="font-bold text-yellow-300">Universitas Asia Malang</span>? 
+                Kost Pak Paidi adalah pilihan tepat untuk mahasiswa yang mencari tempat tinggal tenang dengan fasilitas lengkap.
+            </p>
+            <a href="#kontak" class="inline-block px-6 py-3 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:bg-yellow-600 transition duration-300">Hubungi Kami Sekarang!</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="tentang" class="mb-12 p-6 bg-white bg-opacity-5 rounded-lg shadow-inner">
+            <h3 class="text-xl sm:text-2xl font-semibold text-yellow-200 mb-4 border-b border-yellow-400 pb-2">Tentang Kost Pak Paidi</h3>
+            <p class="mb-4 leading-relaxed">
+                Kost Pak Paidi berlokasi strategis di <span class="font-bold">Malang</span>, sangat ideal bagi <span class="font-bold">mahasiswa Universitas Asia Malang</span> dan kampus-kampus lain di sekitarnya. Kami berkomitmen menyediakan lingkungan kos yang mendukung kegiatan belajar dan istirahat Anda.
+            </p>
+            <p class="leading-relaxed">
+                Dengan suasana yang tenang dan fasilitas yang memadai, Kost Pak Paidi adalah jawaban bagi Anda yang mencari <span class="font-bold">kos mahasiswa asia malang</span> yang nyaman dan terjangkau.
+            </p>
+        </section>
+
+        <!-- Core Business / Facilities Section -->
+        <section id="fasilitas" class="mb-12 p-6 bg-white bg-opacity-5 rounded-lg shadow-inner">
+            <h3 class="text-xl sm:text-2xl font-semibold text-yellow-200 mb-4 border-b border-yellow-400 pb-2">Fasilitas & Keunggulan Kami</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Fasilitas 1: Kasur -->
+                <div class="flex items-start bg-white bg-opacity-10 p-4 rounded-lg shadow-md">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10H3c-1.1 0-2 .9-2 2v5c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-5c0-1.1-.9-2-2-2zm-1 7H4v-3h16v3zm-1-7h-2.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h2.5c.28 0 .5.22.5.5s-.22.5-.5.5zm-3.5 0h-2.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5h2.5c.28 0 .5.22.5.5s-.22.5-.5.5zM21 4H3c-1.1 0-2 .9-2 2v1c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-yellow-300">Kost Standar dengan Kasur</h4>
+                        <p class="text-sm text-gray-200">Setiap kamar dilengkapi dengan kasur yang nyaman, siap huni.</p>
+                    </div>
+                </div>
+
+                <!-- Fasilitas 2: Lemari Kecil -->
+                <div class="flex items-start bg-white bg-opacity-10 p-4 rounded-lg shadow-md">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 16H6v-4h12v4zm0-6H6V6h12v6z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-yellow-300">Lemari Penyimpanan</h4>
+                        <p class="text-sm text-gray-200">Tersedia lemari kecil untuk menyimpan barang-barang pribadi Anda.</p>
+                    </div>
+                </div>
+
+                <!-- Fasilitas 3: Suasana Tenang -->
+                <div class="flex items-start bg-white bg-opacity-10 p-4 rounded-lg shadow-md">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15H9v-2h2v2zm0-4H9V7h2v6zm4 0h-2V7h2v6z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-yellow-300">Lingkungan Tenang</h4>
+                        <p class="text-sm text-gray-200">Suasana kos yang tenang dan kondusif untuk belajar dan beristirahat.</p>
+                    </div>
+                </div>
+
+                <!-- Fasilitas 4: Dekat Kampus -->
+                <div class="flex items-start bg-white bg-opacity-10 p-4 rounded-lg shadow-md">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg text-yellow-300">Lokasi Strategis</h4>
+                        <p class="text-sm text-gray-200">Dekat dengan kampus, minimarket, dan fasilitas umum lainnya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontak" class="p-6 bg-white bg-opacity-5 rounded-lg shadow-inner">
+            <h3 class="text-xl sm:text-2xl font-semibold text-yellow-200 mb-4 border-b border-yellow-400 pb-2">Hubungi Kami</h3>
+            <div class="space-y-4">
+                <div>
+                    <p class="font-semibold text-yellow-300">Alamat:</p>
+                    <p>Jl. Rembuksari No.63, Mojolangu, Kec. Lowokwaru, Kota Malang, Jawa Timur 65142</p>
+                    <a href="https://maps.app.goo.gl/rw3YnvXCgPXAA4Po7" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">Lihat di Google Maps</a>
+                </div>
+                <div>
+                    <p class="font-semibold text-yellow-300">WhatsApp:</p>
+                    <a href="https://wa.me/6285607455654" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">085607455654</a>
+                </div>
+                <div>
+                    <p class="font-semibold text-yellow-300">Kembali ke Halaman Utama:</p>
+                    <a href="https://daftarumkm.biz.id/" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">daftarumkm.biz.id</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="w-full max-w-4xl bg-white bg-opacity-10 rounded-xl p-4 mt-8 text-center text-gray-300 shadow-lg">
+        <p>&copy; 2025 Kost Pak Paidi. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenuContent = document.getElementById('mobileMenuContent');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuContent.classList.toggle('mobile-menu-hidden');
+            mobileMenuContent.classList.toggle('mobile-menu-visible');
+        });
+
+        // Close mobile menu when a link is clicked (optional, for single-page navigation)
+        mobileMenuContent.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenuContent.classList.contains('mobile-menu-visible')) {
+                    mobileMenuContent.classList.remove('mobile-menu-visible');
+                    mobileMenuContent.classList.add('mobile-menu-hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
