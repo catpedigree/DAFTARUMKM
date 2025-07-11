@@ -6,22 +6,37 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+
+<url>
+  <loc>https://daftarumkm.biz.id/</loc>
+  <lastmod>2025-07-11T10:48:37+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://daftarumkm.biz.id/tos.html</loc>
+  <lastmod>2025-07-11T10:48:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://daftarumkm.biz.id/list.html</loc>
+  <lastmod>2025-07-11T10:48:37+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 <url>
   <loc>https://daftarumkm.biz.id/bimo-jajan-kembang-goyang-magetan.html</loc>
-  <lastmod>2025-07-12T03:11:12+07:00</lastmod>
+  <lastmod>2025-07-11T10:48:37+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://daftarumkm.biz.id/dr-electronic-servis-mesin-cuci-banyuwangi.html</loc>
+  <lastmod>2025-07-11T10:48:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>https://daftarumkm.biz.id/jasa-virtual-tour-foto-360.html</loc>
-  <lastmod>2025-07-12T03:11:12+07:00</lastmod>
-</url>
-<url>
-  <loc>https://daftarumkm.biz.id/</loc>
-  <lastmod>2025-07-01T03:08:12+00:00</lastmod>
+  <lastmod>2025-07-11T10:48:37+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
-<url>
-  <loc>https://daftarumkm.biz.id/dr-electronic-servis-mesin-cuci-banyuwangi.html</loc>
-  <lastmod>2025-07-11T03:11:12+07:00</lastmod>
-</url>
 
 </urlset>
