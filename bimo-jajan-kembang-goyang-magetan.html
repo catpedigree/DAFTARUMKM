@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bimo Kembang Goyang - Jajan Kembang Goyang khas Magetan yang renyah, manis, dan lezat. Temukan cita rasa autentik kembang goyang Magetan di sini!">
+    <meta name="keywords" content="jajan kembang goyang magetan, kembang goyang, magetan, jajanan tradisional, snack renyah, bimo kembang goyang, kuliner magetan, oleh-oleh magetan">
+    <meta name="author" content="Bimo Kembang Goyang">
+    <title>Bimo Kembang Goyang - Jajan Kembang Goyang Magetan Asli</title>
+
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%' y='50%' style='dominant-baseline:central;text-anchor:middle;font-family:Arial, sans-serif;font-size:70px;'%3E🌸%3C/text%3E%3C/svg%3E">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffff00; /* Tema halaman warna #ffff00 */
+        }
+        .bg-primary-yellow {
+            background-color: #ffff00;
+        }
+        .text-dark-brown {
+            color: #4a2c00;
+        }
+        .btn-mobile-menu {
+            display: none; /* Hidden by default, shown on mobile */
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide navigation links on mobile by default */
+                flex-direction: column;
+                width: 100%;
+                background-color: #ffff00;
+                position: absolute;
+                top: 64px; /* Adjust based on header height */
+                left: 0;
+                z-index: 10;
+                border-radius: 0 0 1rem 1rem;
+            }
+            .nav-links.active {
+                display: flex; /* Show when active */
+            }
+            .nav-links a {
+                padding: 0.75rem 1.5rem;
+                text-align: center;
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+            }
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+            .btn-mobile-menu {
+                display: block; /* Show button on mobile */
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary-yellow text-dark-brown min-h-screen flex flex-col">
+
+    <!-- Header Section -->
+    <header class="bg-primary-yellow shadow-md py-4 px-6 md:px-10 flex justify-between items-center relative z-20 rounded-b-xl">
+        <div class="flex items-center space-x-3">
+            <!-- Core Business Icon (SVG) - Kembang Goyang -->
+            <svg class="w-10 h-10 text-dark-brown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path>
+                <path d="M12 2v20"></path>
+                <path d="M2 12h20"></path>
+                <path d="M4.93 4.93l14.14 14.14"></path>
+                <path d="M4.93 19.07l14.14-14.14"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <h1 class="text-3xl font-bold text-dark-brown">Bimo Kembang Goyang</h1>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="btn-mobile-menu p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-dark-brown">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+
+        <!-- Navigation Links (Desktop & Mobile Toggle) -->
+        <nav id="nav-links" class="nav-links md:flex md:space-x-8 md:items-center">
+            <a href="#tentang" class="hover:text-white transition duration-300 font-semibold rounded-md py-2 px-4">Tentang Kami</a>
+            <a href="#produk" class="hover:text-white transition duration-300 font-semibold rounded-md py-2 px-4">Produk Kami</a>
+            <a href="#kontak" class="hover:text-white transition duration-300 font-semibold rounded-md py-2 px-4">Kontak</a>
+            <a href="https://daftarumkm.biz.id/" class="bg-dark-brown text-white py-2 px-6 rounded-full hover:bg-opacity-90 transition duration-300 font-semibold shadow-lg">Kembali ke Halaman Utama</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-12">
+
+        <!-- Hero Section -->
+        <section class="text-center mb-16 p-8 bg-white rounded-2xl shadow-xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-dark-brown">
+                Jajan Kembang Goyang Magetan: <span class="text-yellow-600">Renyah, Manis, Bikin Nagih!</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+                Rasakan kelezatan autentik jajanan tradisional khas Magetan. Setiap gigitan Kembang Goyang Bimo adalah perpaduan sempurna antara kerenyahan dan rasa manis yang memikat. Cocok untuk camilan santai, suguhan tamu, atau oleh-oleh istimewa!
+            </p>
+            <a href="#produk" class="inline-block bg-yellow-600 text-white text-xl font-bold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-700 transition duration-300 transform hover:scale-105">
+                Lihat Produk Unggulan Kami
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="tentang" class="mb-16 p-8 bg-white rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-dark-brown mb-6 text-center">Tentang Bimo Kembang Goyang</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <img src="https://placehold.co/600x400/FDBA74/8B5CF6?text=Kembang+Goyang+Lezat" alt="Jajan Kembang Goyang Magetan" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-gray-700 leading-relaxed">
+                    <p class="mb-4">
+                        Bimo Kembang Goyang hadir untuk melestarikan dan menyajikan cita rasa jajanan tradisional Kembang Goyang khas Magetan yang tak lekang oleh waktu. Kami berkomitmen menggunakan bahan-bahan pilihan terbaik dan resep turun-temurun untuk menghasilkan Kembang Goyang dengan kualitas premium.
+                    </p>
+                    <p class="mb-4">
+                        Setiap Kembang Goyang dibuat dengan penuh cinta dan perhatian, menjamin kerenyahan yang pas dan rasa manis yang menggoda. Kami bangga menjadi bagian dari warisan kuliner Magetan dan ingin berbagi kebahagiaan melalui setiap keping Kembang Goyang kami.
+                    </p>
+                    <p>
+                        Dapatkan pengalaman menikmati <strong class="text-dark-brown">jajan kembang goyang Magetan</strong> yang tak tertandingi hanya dari Bimo Kembang Goyang!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Section -->
+        <section id="produk" class="mb-16 p-8 bg-white rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-dark-brown mb-8 text-center">Produk Unggulan Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-yellow-50 rounded-xl shadow-md p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/400x300/FCD34D/4A2C00?text=Kembang+Goyang+Original" alt="Kembang Goyang Original" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-dark-brown mb-2">Kembang Goyang Original</h3>
+                    <p class="text-gray-600 mb-4">Kerenyahan klasik dengan rasa manis yang pas, favorit sepanjang masa.</p>
+                    <span class="text-2xl font-bold text-yellow-700">Mulai dari Rp 15.000</span>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="bg-yellow-50 rounded-xl shadow-md p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/400x300/FCD34D/4A2C00?text=Kembang+Goyang+Wijen" alt="Kembang Goyang Wijen" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-dark-brown mb-2">Kembang Goyang Wijen</h3>
+                    <p class="text-gray-600 mb-4">Sentuhan aroma wijen yang gurih menambah kenikmatan setiap gigitan.</p>
+                    <span class="text-2xl font-bold text-yellow-700">Mulai dari Rp 17.500</span>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="bg-yellow-50 rounded-xl shadow-md p-6 text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/400x300/FCD34D/4A2C00?text=Kembang+Goyang+Aneka+Rasa" alt="Kembang Goyang Aneka Rasa" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-dark-brown mb-2">Kembang Goyang Aneka Rasa</h3>
+                    <p class="text-gray-600 mb-4">Varian rasa inovatif untuk pengalaman Kembang Goyang yang berbeda.</p>
+                    <span class="text-2xl font-bold text-yellow-700">Mulai dari Rp 20.000</span>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <p class="text-lg text-gray-700">
+                    Kami menjamin kualitas dan kebersihan setiap produk <strong class="text-dark-brown">jajan kembang goyang Magetan</strong> kami. Pesan sekarang dan rasakan sendiri kelezatannya!
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontak" class="p-8 bg-white rounded-2xl shadow-xl">
+            <h2 class="text-3xl font-bold text-dark-brown mb-6 text-center">Hubungi Kami</h2>
+            <div class="flex flex-col md:flex-row md:space-x-8 items-start">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <h3 class="text-xl font-semibold text-dark-brown mb-3">Alamat Toko</h3>
+                    <p class="text-gray-700 mb-4">
+                        Jl. Kantil, Dusun Babadan, Balegondo, Kec. Ngariboyo, Kabupaten Magetan, Jawa Timur 63351
+                    </p>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=-7.6670245379194855,111.33917861718791" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-yellow-600 text-white py-2 px-5 rounded-full hover:bg-yellow-700 transition duration-300 shadow-md">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        Lihat di Google Maps
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold text-dark-brown mb-3">Kontak Kami</h3>
+                    <p class="text-gray-700 mb-4">
+                        Untuk pemesanan atau informasi lebih lanjut, silakan hubungi kami melalui WhatsApp:
+                    </p>
+                    <a href="https://wa.me/6281554438221" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-green-500 text-white py-2 px-5 rounded-full hover:bg-green-600 transition duration-300 shadow-md">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                        WhatsApp: 081554438221
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark-brown text-white py-6 px-4 md:px-10 mt-12 rounded-t-xl">
+        <div class="container mx-auto text-center">
+            <p class="mb-2">&copy; 2025 Bimo Kembang Goyang. Semua Hak Dilindungi.</p>
+            <a href="https://daftarumkm.biz.id/" class="text-yellow-300 hover:text-yellow-400 transition duration-300">
+                Kembali ke Halaman Utama daftarumkm.biz.id
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const navLinks = document.getElementById('nav-links');
+
+            mobileMenuButton.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+
+            // Close menu when a link is clicked (for smooth scroll)
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

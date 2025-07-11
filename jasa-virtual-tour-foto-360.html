@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JasaVR | Jasa Virtual Tour & Foto 360 Profesional di Surabaya</title>
+    <meta name="description" content="JasaVR menyediakan layanan jasa virtual tour interaktif, foto 360, pembuatan website virtual tour, dan integrasi 360 Google Maps. Tingkatkan pengalaman visual bisnis Anda di Surabaya dan sekitarnya.">
+    <meta name="keywords" content="jasa virtual tour, virtual tour, foto 360, 360, website interaktif virtual tour, 360 Google Maps, Surabaya, JasaVR">
+    <meta name="author" content="JasaVR">
+
+    <!-- Favicon SVG -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌐%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind slate-50 */
+            color: #1e293b; /* Tailwind slate-800 */
+        }
+        .section-padding {
+            padding: 4rem 1rem; /* Responsive padding */
+        }
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+        .btn-primary {
+            @apply bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg;
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4 md:px-6">
+            <a href="#" class="text-2xl font-bold text-blue-700 rounded-md p-2">JasaVR</a>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Beranda</a>
+                <a href="#layanan" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Layanan</a>
+                <a href="#kontak" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200">Kontak</a>
+                <a href="https://daftarumkm.biz.id/" class="text-gray-700 hover:text-blue-600 font-medium transition duration-200" target="_blank" rel="noopener noreferrer">Kembali ke Daftar UMKM</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-75 z-40 hidden md:hidden">
+            <div class="bg-white w-3/4 h-full p-6 shadow-lg relative ml-auto">
+                <button id="close-menu-button" class="absolute top-4 right-4 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <svg class="w-8 h-8 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <nav class="flex flex-col space-y-6 mt-12">
+                    <a href="#home" class="text-gray-800 hover:text-blue-600 text-lg font-medium transition duration-200" onclick="toggleMobileMenu()">Beranda</a>
+                    <a href="#layanan" class="text-gray-800 hover:text-blue-600 text-lg font-medium transition duration-200" onclick="toggleMobileMenu()">Layanan</a>
+                    <a href="#kontak" class="text-gray-800 hover:text-blue-600 text-lg font-medium transition duration-200" onclick="toggleMobileMenu()">Kontak</a>
+                    <a href="https://daftarumkm.biz.id/" class="text-gray-800 hover:text-blue-600 text-lg font-medium transition duration-200" target="_blank" rel="noopener noreferrer" onclick="toggleMobileMenu()">Kembali ke Daftar UMKM</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white section-padding text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 rounded-lg p-2">
+                Jasa <span class="text-yellow-300">Virtual Tour</span> & <span class="text-green-300">Foto 360</span> Profesional
+            </h1>
+            <p class="text-lg md:text-xl mb-8 opacity-90">
+                Transformasikan ruang Anda menjadi pengalaman digital yang imersif dan menarik. Kami hadir untuk kebutuhan <span class="font-semibold">virtual tour</span> dan <span class="font-semibold">foto 360</span> Anda.
+            </p>
+            <a href="#layanan" class="btn-primary">Lihat Layanan Kami</a>
+        </div>
+    </section>
+
+    <!-- Core Business Services Section -->
+    <section id="layanan" class="section-padding bg-white">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-blue-800">Layanan Inti JasaVR</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1: Jasa Virtual Tour -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-600 mb-4 mx-auto w-16 h-16">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
+                            <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.69a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.875a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Jasa Virtual Tour</h3>
+                    <p class="text-gray-600">Ciptakan pengalaman tur virtual interaktif untuk properti, bisnis, atau lokasi Anda.</p>
+                </div>
+
+                <!-- Service 2: Foto 360 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-600 mb-4 mx-auto w-16 h-16">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
+                            <path fill-rule="evenodd" d="M1.5 8.67v3.09a8.766 8.766 0 0115.72 2.542l-.465 1.163a1.5 1.5 0 01-1.163.677H12.75a1.5 1.5 0 01-1.172-.563l-1.572-1.966a1.5 1.5 0 00-1.172-.563H3.75a1.5 1.5 0 00-1.172.563l-1.572 1.966A1.5 1.5 0 010 18.375V21a.75.75 0 00.75.75h.75A.75.75 0 003 21v-3.675l1.572-1.966a1.5 1.5 0 011.172-.563h3.75a1.5 1.5 0 011.172.563l1.572 1.966A1.5 1.5 0 0015.75 21H18a2.25 2.25 0 002.25-2.25V15.75a2.25 2.25 0 00-2.25-2.25H15.75a2.25 2.25 0 00-2.25 2.25v.375a.75.75 0 01-1.5 0v-.375a.75.75 0 00-.75-.75H10.5a.75.75 0 00-.75.75v.375a.75.75 0 01-1.5 0v-.375a.75.75 0 00-.75-.75H3.75a.75.75 0 00-.75.75V18a.75.75 0 01-1.5 0v-2.25a.75.75 0 00-.75-.75H1.5zM19.5 8.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM16.5 8.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM13.5 8.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM10.5 8.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM7.5 8.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM4.5 8.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM19.5 5.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM16.5 5.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM13.5 5.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM10.5 5.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM7.5 5.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM4.5 5.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0v-.75zM19.5 2.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V2.25zM16.5 2.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V2.25zM13.5 2.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V2.25zM10.5 2.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V2.25zM7.5 2.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V2.25zM4.5 2.25a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V2.25z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Foto 360 Derajat</h3>
+                    <p class="text-gray-600">Abadikan setiap sudut ruangan dengan foto 360 berkualitas tinggi untuk tampilan lengkap.</p>
+                </div>
+
+                <!-- Service 3: Website Interaktif Virtual Tour -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-600 mb-4 mx-auto w-16 h-16">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
+                            <path d="M4.5 3.75a3 3 0 00-3 3v10.5a3 3 0 003 3h15a3 3 0 003-3V6.75a3 3 0 00-3-3H4.5zm.75 7.5a.75.75 0 000 1.5h.75a.75.75 0 000-1.5H5.25zm1.5 0a.75.75 0 000 1.5H7.5a.75.75 0 000-1.5H6.75zm1.5 0a.75.75 0 000 1.5H9a.75.75 0 000-1.5H8.25zM12 7.5a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V7.5zm1.5 0a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V7.5zm1.5 0a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V7.5zM18 7.5a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V7.5zm.75 3.75a.75.75 0 000 1.5h.75a.75.75 0 000-1.5H18.75zm-1.5 0a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zm-1.5 0a.75.75 0 000 1.5h.75a.75.75 0 000-1.5h-.75zM12 15a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V15zm1.5 0a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V15zm1.5 0a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V15zm1.5 0a.75.75 0 00-1.5 0v.75a.75.75 0 001.5 0V15z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Website Interaktif Virtual Tour</h3>
+                    <p class="text-gray-600">Integrasikan virtual tour Anda ke dalam website khusus yang interaktif dan mudah diakses.</p>
+                </div>
+
+                <!-- Service 4: 360 Google Maps -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="text-blue-600 mb-4 mx-auto w-16 h-16">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
+                            <path fill-rule="evenodd" d="M11.54 22.351A8.287 8.287 0 0018 21.75c.381 0 .757.034 1.134.106a.75.75 0 01.804.62c.3.991 1.004 1.655 1.75 1.655H9.75c-.746 0-1.45-.664-1.75-1.655a.75.75 0 01.804-.62A8.287 8.287 0 0011.54 22.351z" clip-rule="evenodd" />
+                            <path d="M12 12.75a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                            <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 18a8.25 8.25 0 100-16.5 8.25 8.25 0 000 16.5z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">360 Google Maps</h3>
+                    <p class="text-gray-600">Integrasikan foto 360 Anda langsung ke Google Maps untuk visibilitas maksimal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="section-padding bg-blue-50 text-gray-800">
+        <div class="container mx-auto text-center max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-blue-800">Hubungi Kami</h2>
+            <p class="text-lg mb-4">Siap untuk membawa bisnis Anda ke level berikutnya dengan pengalaman visual yang imersif?</p>
+            <p class="text-xl font-semibold mb-2">Alamat:</p>
+            <p class="text-lg mb-4">Ambengan Batu - Surabaya</p>
+            <p class="text-xl font-semibold mb-2">WhatsApp:</p>
+            <p class="text-2xl font-bold text-green-600 mb-8">
+                <a href="https://wa.me/628999989900" target="_blank" rel="noopener noreferrer" class="hover:underline">08999989900</a>
+            </p>
+            <a href="https://daftarumkm.biz.id/" class="btn-primary" target="_blank" rel="noopener noreferrer">Kembali ke Daftar UMKM</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 JasaVR. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenuButton = document.getElementById('close-menu-button');
+
+        function toggleMobileMenu() {
+            mobileMenuOverlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden'); // Prevent scrolling when menu is open
+        }
+
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+        closeMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Close menu when clicking outside (on the overlay itself)
+        mobileMenuOverlay.addEventListener('click', function(event) {
+            if (event.target === mobileMenuOverlay) {
+                toggleMobileMenu();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
