@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapoer Farza - Spesialis Cookies, Kue Soes Buah, Mille Crepes, Brownies, Cake</title>
+    <meta name="description" content="Dapoer Farza menyediakan aneka kue lezat seperti cookies renyah, kue soes buah segar, mille crepes lembut, brownies fudgy, dan cake spesial di Surabaya. Pesan sekarang untuk acara spesial Anda!">
+    <meta name="keywords" content="Dapoer Farza, cookies Surabaya, kue soes buah Surabaya, mille crepes Surabaya, brownies Surabaya, cake Surabaya, pesanan kue Surabaya, kuliner Surabaya, jajanan Surabaya, toko kue Surabaya, kue online Surabaya">
+    <meta name="author" content="Dapoer Farza">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon SVG -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50%25' y='50%25' font-size='60' text-anchor='middle' dominant-baseline='central'%3E%F0%9F%8D%AA%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fefce8; /* Light yellow background */
+        }
+        /* Custom styles for mobile menu toggle */
+        #mobile-menu.hidden {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            #mobile-menu.hidden {
+                display: flex !important; /* Always show on desktop */
+            }
+            #mobile-menu-button {
+                display: none; /* Hide button on desktop */
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header Section -->
+    <header class="bg-amber-300 shadow-lg py-4 px-6 md:px-12 rounded-b-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-amber-900">Dapoer Farza</a>
+            <button id="mobile-menu-button" class="md:hidden text-amber-900 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h4"></path>
+                </svg>
+            </button>
+            <nav id="mobile-menu" class="hidden md:flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 absolute md:relative top-20 left-0 w-full md:w-auto bg-amber-200 md:bg-transparent p-6 md:p-0 rounded-lg shadow-xl md:shadow-none z-10">
+                <a href="#hero" class="block py-2 px-4 text-amber-900 hover:text-amber-700 font-medium rounded-md transition duration-300 ease-in-out">Beranda</a>
+                <a href="#produk" class="block py-2 px-4 text-amber-900 hover:text-amber-700 font-medium rounded-md transition duration-300 ease-in-out">Produk</a>
+                <a href="#kontak" class="block py-2 px-4 text-amber-900 hover:text-amber-700 font-medium rounded-md transition duration-300 ease-in-out">Kontak</a>
+                <a href="https://daftarumkm.biz.id/" target="_blank" class="block py-2 px-4 text-amber-900 hover:text-amber-700 font-medium rounded-md transition duration-300 ease-in-out">Kembali ke Daftar UMKM</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-gradient-to-br from-amber-100 to-yellow-200 py-20 md:py-32 text-center rounded-b-3xl shadow-inner">
+        <div class="container mx-auto px-6">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-amber-900 mb-6 leading-tight">
+                Manisnya Kebahagiaan dari Dapoer Farza
+            </h1>
+            <p class="text-xl md:text-2xl text-amber-800 mb-10 max-w-3xl mx-auto">
+                Nikmati kelezatan kue dan cookies premium yang dibuat dengan cinta dan bahan-bahan terbaik.
+            </p>
+            <a href="#produk" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                Lihat Produk Kami
+            </a>
+        </div>
+    </section>
+
+    <!-- Core Business/Products Section -->
+    <section id="produk" class="py-16 md:py-24 bg-orange-50 rounded-xl mx-4 md:mx-auto my-12 shadow-md">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-amber-900 mb-12">Produk Unggulan Dapoer Farza</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Product Card: Cookies -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-amber-200">
+                    <div class="text-amber-600 mb-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cookie mx-auto">
+                            <path d="M12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"></path>
+                            <path d="M10 8h.01"></path>
+                            <path d="M16 14h.01"></path>
+                            <path d="M13.5 13.5h.01"></path>
+                            <path d="M8.5 16.5h.01"></path>
+                            <path d="M12.5 7.5h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Cookies Renyah</h3>
+                    <p class="text-gray-700 text-center">
+                        Nikmati setiap gigitan cookies Dapoer Farza yang renyah di luar dan lembut di dalam. Cocok untuk teman minum teh atau camilan favorit keluarga.
+                    </p>
+                    <p class="text-center text-amber-600 font-semibold mt-4">
+                        <span class="inline-block bg-amber-100 px-3 py-1 rounded-full text-sm">Best Seller!</span>
+                    </p>
+                </div>
+
+                <!-- Product Card: Kue Soes Buah -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-amber-200">
+                    <div class="text-amber-600 mb-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cake mx-auto">
+                            <path d="M20 7v.01"></path>
+                            <path d="M18 7v.01"></path>
+                            <path d="M16 7v.01"></path>
+                            <path d="M12 7v.01"></path>
+                            <path d="M10 7v.01"></path>
+                            <path d="M8 7v.01"></path>
+                            <path d="M6 7v.01"></path>
+                            <path d="M4 7v.01"></path>
+                            <path d="M2 7v.01"></path>
+                            <path d="M22 7v.01"></path>
+                            <path d="M2 10a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-6z"></path>
+                            <path d="M12 18v4"></path>
+                            <path d="M9 21h6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Kue Soes Buah Segar</h3>
+                    <p class="text-gray-700 text-center">
+                        Sensasi lembutnya kulit soes berpadu dengan isian krim vanila dan potongan buah segar. Ideal untuk hidangan penutup yang menyegarkan.
+                    </p>
+                    <p class="text-center text-amber-600 font-semibold mt-4">
+                        <span class="inline-block bg-amber-100 px-3 py-1 rounded-full text-sm">Segar & Lezat!</span>
+                    </p>
+                </div>
+
+                <!-- Product Card: Mille Crepes -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-amber-200">
+                    <div class="text-amber-600 mb-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers mx-auto">
+                            <path d="m12.83 2.189 7.91 1.776c.74.165 1.26 1.01 1.09 1.75l-1.777 7.91c-.165.74-1.01 1.26-1.75 1.09L3.58 12.02c-.74-.166-1.26-1.01-1.09-1.75l1.777-7.91c.165-.74 1.01-1.26 1.75-1.09z"></path>
+                            <path d="m20.849 4.904-1.776 7.91c-.165.74-.87 1.22-1.62 1.06L3.58 12.02"></path>
+                            <path d="m19.07 12.814-1.776 7.91c-.165.74-.87 1.22-1.62 1.06L1.803 19.86"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Mille Crepes Lembut</h3>
+                    <p class="text-gray-700 text-center">
+                        Lapisan crepes tipis yang berpadu sempurna dengan krim lembut, menciptakan harmoni rasa yang tak terlupakan di setiap irisan.
+                    </p>
+                    <p class="text-center text-amber-600 font-semibold mt-4">
+                        <span class="inline-block bg-amber-100 px-3 py-1 rounded-full text-sm">Eksklusif!</span>
+                    </p>
+                </div>
+
+                <!-- Product Card: Brownies -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-amber-200">
+                    <div class="text-amber-600 mb-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-stack mx-auto">
+                            <path d="M10 20H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4"></path>
+                            <path d="M12 17H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"></path>
+                            <rect x="14" y="14" width="8" height="8" rx="2"></rect>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Brownies Fudgy</h3>
+                    <p class="text-gray-700 text-center">
+                        Brownies cokelat pekat dengan tekstur fudgy yang lumer di mulut. Pilihan sempurna untuk pecinta cokelat sejati!
+                    </p>
+                    <p class="text-center text-amber-600 font-semibold mt-4">
+                        <span class="inline-block bg-amber-100 px-3 py-1 rounded-full text-sm">Cokelat Banget!</span>
+                    </p>
+                </div>
+
+                <!-- Product Card: Cake -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition duration-300 ease-in-out border border-amber-200">
+                    <div class="text-amber-600 mb-4 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cake-slice mx-auto">
+                            <path d="M12 17H6a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"></path>
+                            <path d="M12 17v4"></path>
+                            <path d="M9 21h6"></path>
+                            <path d="M17 14h.01"></path>
+                            <path d="M17 11h.01"></path>
+                            <path d="M17 8h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Aneka Cake Spesial</h3>
+                    <p class="text-gray-700 text-center">
+                        Dari ulang tahun hingga perayaan, cake Dapoer Farza hadir dengan berbagai rasa dan desain menawan untuk memeriahkan setiap momen Anda.
+                    </p>
+                    <p class="text-center text-amber-600 font-semibold mt-4">
+                        <span class="inline-block bg-amber-100 px-3 py-1 rounded-full text-sm">Untuk Setiap Momen!</span>
+                    </p>
+                </div>
+
+                <!-- Call to action for order -->
+                <div class="lg:col-span-3 text-center mt-10">
+                    <p class="text-xl text-amber-800 mb-6">Siap memesan kelezatan dari Dapoer Farza?</p>
+                    <a href="https://wa.me/6288803795928" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-whatsapp inline-block mr-2">
+                            <path d="M17.4 17.4V14.5A2.9 2.9 0 0 0 14.5 11.6H9.5A2.9 2.9 0 0 0 6.6 14.5V17.4L4 20L6.6 17.4A10 10 0 1 1 17.4 17.4Z"></path>
+                        </svg>
+                        Pesan via WhatsApp Sekarang!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-16 md:py-24 bg-yellow-100 rounded-xl mx-4 md:mx-auto my-12 shadow-md">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-amber-900 mb-12">Hubungi Kami</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                <!-- Address & Map -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-yellow-200">
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4">Lokasi Kami</h3>
+                    <p class="text-gray-700 mb-4">
+                        Jl. Tengger Raya II No.53a, Kandangan, Kec. Benowo, Surabaya, Jawa Timur 60199
+                    </p>
+                    <a href="https://maps.app.goo.gl/3RTNfmUtpkNMVuwk6" target="_blank" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin inline-block mr-2">
+                            <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path>
+                            <path d="M12 22s8-4 8-10a8 8 0 0 0-16 0c0 6 8 10 8 10Z"></path>
+                        </svg>
+                        Lihat di Google Maps
+                    </a>
+                </div>
+
+                <!-- Contact Details & Hours -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-yellow-200">
+                    <h3 class="text-2xl font-semibold text-amber-800 mb-4">Informasi Kontak & Jam Buka</h3>
+                    <p class="text-gray-700 mb-2">
+                        <strong>WhatsApp:</strong> <a href="https://wa.me/6288803795928" target="_blank" class="text-green-600 hover:underline">088803795928</a>
+                    </p>
+                    <p class="text-gray-700 mb-2">
+                        <strong>Jam Buka:</strong> 09.00 - 17.00 WIB (Senin - Sabtu)
+                    </p>
+                    <p class="text-gray-700">
+                        <strong>Hari Minggu:</strong> Tutup
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-amber-300 py-6 px-6 md:px-12 mt-12 rounded-t-xl shadow-lg">
+        <div class="container mx-auto text-center text-amber-900">
+            <p>&copy; 2025 Dapoer Farza. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu after clicking a link
+                if (window.innerWidth < 768) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu if clicked outside or resized to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                // Ensure it's hidden on mobile if not explicitly opened
+                if (!mobileMenu.classList.contains('hidden')) {
+                     mobileMenu.classList.add('hidden');
+                }
+            }
+        });
+
+        // Close mobile menu when clicking outside of it
+        document.addEventListener('click', (event) => {
+            if (window.innerWidth < 768 && !mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
