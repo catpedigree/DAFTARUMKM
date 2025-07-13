@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warkop Tangguh - Warung Kopi & Kuliner Sidoarjo | Nasi Pecel, Kopi, Event Komunitas</title>
+    <meta name="description" content="Nikmati Nasi Pecel Blitar, Kopi nikmat, dan aneka kuliner di Warkop Tangguh Sidoarjo. Tempat nongkrong asyik dengan event Panco Sidoarjo & Mobile Legends. Kunjungi kami di Jl. KH. Sulaiman No.5, Banjarsari, Kragan, Gedangan, Sidoarjo.">
+    <meta name="keywords" content="Warung Kopi Tangguh, Warkop Tangguh, Nasi Pecel Blitar Sidoarjo, Kopi Sidoarjo, Event Panco Sidoarjo, Mobile Legends Sidoarjo, Kuliner Sidoarjo, Tempat Nongkrong Sidoarjo, Warkop Sidoarjo, Kopi Gedangan, Pecel Sidoarjo">
+    <meta name="author" content="Warkop Tangguh">
+
+    <!-- Favicon SVG -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D3B15A'%3E%3Cpath d='M18.5 4H6C4.9 4 4 4.9 4 6v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H6V6h12v12zM12 7c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM10 1h4v2h-4zM7 1h2v2H7zM15 1h2v2h-2z'%3E%3C/path%3E%3C/svg%3E" type="image/svg+xml">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+        }
+        .bg-primary-color {
+            background-color: #D3B15A;
+        }
+        .text-primary-color {
+            color: #D3B15A;
+        }
+        .border-primary-color {
+            border-color: #D3B15A;
+        }
+        .hover-bg-primary-dark:hover {
+            background-color: #B89B4C; /* Slightly darker shade for hover */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D3B15A;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #B89B4C;
+        }
+
+        /* Smooth scroll for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <!-- Logo/Nama Usaha -->
+                <h1 class="text-2xl font-bold text-primary-color">Warkop Tangguh</h1>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-color rounded-md p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Navigation (hidden on mobile) -->
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="#home" class="text-gray-600 hover:text-primary-color transition duration-300">Beranda</a>
+                <a href="#about" class="text-gray-600 hover:text-primary-color transition duration-300">Tentang Kami</a>
+                <a href="#menu" class="text-gray-600 hover:text-primary-color transition duration-300">Menu</a>
+                <a href="#events" class="text-gray-600 hover:text-primary-color transition duration-300">Event</a>
+                <a href="#contact" class="text-gray-600 hover:text-primary-color transition duration-300">Kontak</a>
+                <a href="https://daftarumkm.biz.id/" class="text-gray-600 hover:text-primary-color transition duration-300" target="_blank" rel="noopener noreferrer">Kembali ke Daftar UMKM</a>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-75 z-40 hidden"></div>
+
+        <!-- Mobile Navigation (hidden by default, toggled by JS) -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg absolute top-0 right-0 w-64 h-screen transform translate-x-full transition-transform duration-300 ease-in-out z-50">
+            <div class="p-4 flex justify-end">
+                <button id="close-mobile-menu" class="text-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-color rounded-md p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col p-4 space-y-4 font-medium">
+                <a href="#home" class="block text-gray-800 hover:text-primary-color transition duration-300 py-2" onclick="closeMobileMenu()">Beranda</a>
+                <a href="#about" class="block text-gray-800 hover:text-primary-color transition duration-300 py-2" onclick="closeMobileMenu()">Tentang Kami</a>
+                <a href="#menu" class="block text-gray-800 hover:text-primary-color transition duration-300 py-2" onclick="closeMobileMenu()">Menu</a>
+                <a href="#events" class="block text-gray-800 hover:text-primary-color transition duration-300 py-2" onclick="closeMobileMenu()">Event</a>
+                <a href="#contact" class="block text-gray-800 hover:text-primary-color transition duration-300 py-2" onclick="closeMobileMenu()">Kontak</a>
+                <a href="https://daftarumkm.biz.id/" class="block text-gray-800 hover:text-primary-color transition duration-300 py-2" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">Kembali ke Daftar UMKM</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-primary-color text-Black py-20 md:py-32 flex items-center justify-center min-h-screen-75">
+            <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('gambar/warkop-tangguh.jpg');"></div>
+            <div class="relative z-10 text-center px-4">
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                    Warkop Tangguh: <span class="block mt-2">Nikmatnya Kopi dan Kuliner Nusantara</span>
+                </h2>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto animate-fade-in-up delay-200">
+                    Tempat nongkrong asyik di Sidoarjo dengan sajian Nasi Pecel Blitar, Kopi pilihan, dan event komunitas seru!
+                </p>
+                <a href="#menu" class="inline-block bg-white text-Black font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105 animate-fade-in-up delay-400">
+                    Lihat Menu Kami
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Tentang Warkop Tangguh</h2>
+                <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed text-center">
+                    <p class="mb-4">
+                        Warkop Tangguh adalah destinasi kuliner dan tempat nongkrong favorit di Sidoarjo. Kami bangga menyajikan hidangan autentik Nusantara seperti Nasi Pecel Blitar yang legendaris, Nasi Penyetan yang menggugah selera, dan aneka Nasi Goreng.
+                    </p>
+                    <p class="mb-4">
+                        Lebih dari sekadar tempat makan, Warkop Tangguh juga merupakan rumah bagi para pecinta kopi, dengan pilihan kopi berkualitas yang siap menemani obrolan santai Anda. Kami juga menyediakan berbagai minuman segar seperti Es Sirup dan Es Cao, serta camilan lezat seperti Lumpia, Pisang Keju, dan Cireng.
+                    </p>
+                    <p>
+                        Kami berkomitmen untuk menciptakan suasana yang nyaman dan ramah, menjadikannya tempat yang sempurna untuk berkumpul bersama teman dan keluarga, atau sekadar menikmati waktu sendiri.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Menu Andalan Kami</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Nasi Pecel Blitar -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <svg class="w-16 h-16 mb-4 text-primary-color" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 10V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0H4V6h16v4zM12 15c-2.76 0-5 2.24-5 5h10c0-2.76-2.24-5-5-5zm0 2c1.66 0 3 1.34 3 3H9c0-1.66 1.34-3 3-3z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Nasi Pecel Blitar</h3>
+                        <p class="text-gray-600">Perpaduan nasi hangat dengan sayuran segar dan bumbu pecel khas Blitar yang pedas gurih.</p>
+                    </div>
+                    <!-- Nasi Penyetan -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <svg class="w-16 h-16 mb-4 text-primary-color" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 10H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm-1 8H4v-6h16v6zM12 4c-1.66 0-3 1.34-3 3v1h6V7c0-1.66-1.34-3-3-3z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Nasi Penyetan</h3>
+                        <p class="text-gray-600">Pilihan ayam, bebek, tahu, tempe, atau telor dengan sambal penyet pedas yang mantap.</p>
+                    </div>
+                    <!-- Nasi Goreng -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <svg class="w-16 h-16 mb-4 text-primary-color" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Nasi Goreng</h3>
+                        <p class="text-gray-600">Berbagai varian Nasi Goreng dengan bumbu rahasia Warkop Tangguh.</p>
+                    </div>
+                    <!-- Kopi -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <svg class="w-16 h-16 mb-4 text-primary-color" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 3H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12H4V5h16v10zm-2-7h-1.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5H18c.28 0 .5.22.5.5s-.22.5-.5.5zM12 7c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Kopi Pilihan</h3>
+                        <p class="text-gray-600">Beragam pilihan kopi lokal dan internasional untuk para pecinta kopi.</p>
+                    </div>
+                    <!-- Es Sirup & Es Cao -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <svg class="w-16 h-16 mb-4 text-primary-color" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 8v8H8V8h8m2-2H6v12h12V6zM14 1H10v2h4V1zM5 3h2v2H5zM17 3h2v2h-2zM4 6c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V7c0-.55-.45-1-1-1H4z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Es Sirup & Es Cao</h3>
+                        <p class="text-gray-600">Minuman segar pelepas dahaga, Es Sirup aneka rasa dan Es Cao yang unik.</p>
+                    </div>
+                    <!-- Camilan -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <svg class="w-16 h-16 mb-4 text-primary-color" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.5 6c-2.61.9-5.18 1.4-7.5 1.4-2.32 0-4.89-.5-7.5-1.4C2.92 6.9 2 7.7 2 9v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.3-.92-2.1-2.5-3zm-2.1 11H5.6c-.33 0-.6-.27-.6-.6V9.6c0-.33.27-.6.6-.6h12.8c.33 0 .6.27.6.6v6.8c0 .33-.27.6-.6.6zM12 11c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Camilan Lezat</h3>
+                        <p class="text-gray-600">Lumpia, Pisang Keju, dan Cireng hangat, teman sempurna untuk minum kopi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Event Seru di Warkop Tangguh</h2>
+                <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed text-center">
+                    <p class="mb-4">
+                        Warkop Tangguh bukan hanya tempat makan, tapi juga pusat kegiatan komunitas! Kami sering menjadi tuan rumah berbagai event menarik:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-6">
+                        <li>
+                            <span class="font-semibold text-primary-color">Event Komunitas Panco Sidoarjo:</span> Saksikan atau ikuti langsung pertandingan panco yang seru dan menegangkan dari komunitas Panco Sidoarjo. Jadwal event akan diumumkan secara berkala di media sosial kami!
+                        </li>
+                        <li>
+                            <span class="font-semibold text-primary-color">Event Game Mobile Legends:</span> Para gamer Mobile Legends, merapat! Kami sering mengadakan turnamen atau sesi mabar (main bareng) Mobile Legends. Asah skillmu dan raih kemenangan di Warkop Tangguh!
+                        </li>
+                    </ul>
+                    <p>
+                        Ikuti terus media sosial kami untuk informasi terbaru mengenai jadwal event dan promo menarik lainnya!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">Hubungi Kami</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                    <div class="flex flex-col items-center text-center p-6 rounded-lg shadow-md bg-gray-50">
+                        <svg class="w-16 h-16 mb-4 text-primary-color" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Alamat Kami</h3>
+                        <p class="text-gray-700 mb-4">Jl. KH. Sulaiman No.5, Banjarsari, Kragan, Kec. Gedangan, Kabupaten Sidoarjo, Jawa Timur 61254</p>
+                        <a href="https://maps.app.goo.gl/RBXRKnnpYQQhNM9V7" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary-color text-white font-bold py-2 px-6 rounded-full hover-bg-primary-dark transition duration-300 transform hover:scale-105">
+                            Lihat di Google Maps
+                        </a>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 rounded-lg shadow-md bg-gray-50">
+                        <svg class="w-16 h-16 mb-4 text-primary-color" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-3.5 14H7c-.55 0-1-.45-1-1V9c0-.55.45-1 1-1h9.5c.55 0 1 .45 1 1v6c0 .55-.45 1-1 1zm-1.5-7h-6v2h6V9zm0 3h-6v2h6v-2z"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Hubungi Via WhatsApp</h3>
+                        <p class="text-gray-700 mb-4">Untuk pertanyaan atau pemesanan, hubungi kami:</p>
+                        <a href="https://wa.me/6287718885557" target="_blank" rel="noopener noreferrer" class="inline-block bg-primary-color text-white font-bold py-2 px-6 rounded-full hover-bg-primary-dark transition duration-300 transform hover:scale-105">
+                            WhatsApp 087718885557
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Warkop Tangguh. Hak Cipta Dilindungi.</p>
+            <p class="mt-2 text-sm">Dibuat dengan <span class="text-red-500">&hearts;</span> untuk pecinta kopi dan kuliner.</p>
+            <div class="mt-4">
+                <a href="https://daftarumkm.biz.id/" class="text-gray-400 hover:text-primary-color transition duration-300" target="_blank" rel="noopener noreferrer">Kembali ke Halaman Utama Daftar UMKM</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            mobileMenuOverlay.classList.remove('hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuOverlay.classList.add('hidden');
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        closeMobileMenuButton.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu); // Close when clicking outside menu
+
+        // Close mobile menu when a navigation link is clicked
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Add animation classes for hero section elements
+        const heroTitle = document.querySelector('.animate-fade-in-up');
+        const heroSubtitle = document.querySelector('.animate-fade-in-up.delay-200');
+        const heroButton = document.querySelector('.animate-fade-in-up.delay-400');
+
+        // Simple Intersection Observer to trigger animations on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, observerOptions);
+
+        // Define keyframes for animations
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fadeInFromBottom {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            .animate-fade-in-up {
+                opacity: 0;
+                transform: translateY(20px);
+                animation-fill-mode: forwards;
+            }
+            .animate-fade-in-up.is-visible {
+                animation: fadeInFromBottom 0.8s ease-out forwards;
+            }
+            .animate-fade-in-up.delay-200.is-visible {
+                animation-delay: 0.2s;
+            }
+            .animate-fade-in-up.delay-400.is-visible {
+                animation-delay: 0.4s;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Observe elements
+        document.querySelectorAll('.animate-fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+        document.querySelectorAll('.transform.hover\\:scale-105').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
